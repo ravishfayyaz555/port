@@ -5,7 +5,7 @@ const HomeSection: React.FC = () => {
     return (
         <section id="home" className={styles.homeContainer}>
             <div className={styles.content}>
-                <h1 className={styles.name}>Hi 👋 I'm Areeba</h1>  
+                <h1 className={styles.name}>Hi 👋I am Areeba</h1>  
                 <h2 className={styles.title}>Frontend Developer</h2> 
                 <button className={styles.button}>Hire Me</button>
             </div>
