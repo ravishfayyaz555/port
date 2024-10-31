@@ -1,0 +1,96 @@
+.aboutSection {
+  padding: 30px 0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 3s ease forwards;
+}
+
+.roundImage {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.textContainer {
+  flex: 2;
+  padding-left: 0;
+  padding-top: 15px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 3s ease forwards;
+}
+
+.title {
+  font-size: 2rem; 
+  margin-bottom: 10px;
+  color: #f0e98ce8;
+  text-align: center; 
+}
+.description {
+  font-size: 0.9rem;
+  color: #fff;
+  font-style: oblique;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .aboutSection {
+    flex-direction: row;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .textContainer {
+    padding-left: 40px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

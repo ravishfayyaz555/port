@@ -1,0 +1,78 @@
+.skillsSection {
+  padding: 50px 0;
+  background-color: #000;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #f0e98ce8;
+  margin-top: 50px;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+.skill {
+  background-color:thistle;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px); 
+  margin-bottom: 20px; 
+}
+
+.skillName {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.progressBar {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  background-color:tan; 
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.skillLevel {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #777;
+}
+@media (max-width: 768px) {
+  .skill {
+    width: 100%; 
+  }
+
+  .title {
+    font-size: 3rem; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skill {
+    width: calc(50% - 10px);
+  }
+
+  .title {
+    font-size: 3.5rem; 
+  }
+}
