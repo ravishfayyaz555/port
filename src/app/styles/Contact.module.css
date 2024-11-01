@@ -32,10 +32,10 @@
 }
 
 @keyframes animateBlink {
-  0% { background: #f0e98ce8; }
-  25% { background: #f0e98ce8; }
+  0%, 25% { background: #f0e98ce8; }
 }
 
+/* Login Box */
 .loginBox {
   position: relative;
   width: 90%;
@@ -130,21 +130,6 @@
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-  .loginBox h2 {
-    font-size: 1.8em;
-  }
-
-  .inputBox input,
-  .inputBox textarea {
-    height: 50px;
-  }
-
-  .btn {
-    width: 70%;
-  }
-}
-
 @media (max-width: 900px) {
   .loginBox {
     width: 90%;
@@ -169,6 +154,7 @@
   }
 }
 
+/* Adjust position of animated circle on medium screens */
 @media (max-width: 600px) {
   .loginBox {
     width: 95%;
@@ -193,12 +179,19 @@
   .inputBox label {
     font-size: 0.8em;
   }
+
+  /* Reposition the animated circle to top left */
+  .animatedCircle {
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 480px) {
   .animatedCircle {
-    width: 180px; 
-    height: 180px;
+    display: none; /* Hide the animated circle on very small screens */
   }
 
   .container span {
