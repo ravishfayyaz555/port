@@ -34,8 +34,6 @@
 @keyframes animateBlink {
   0%, 25% { background: #f0e98ce8; }
 }
-
-/* Login Box */
 .loginBox {
   position: relative;
   width: 90%;
@@ -78,8 +76,8 @@
 }
 
 .inputBox textarea {
-  height: 60px; /* Default height for textarea */
-  resize: none; /* Prevents resizing */
+  height: 60px; 
+  resize: none; 
 }
 
 .inputBox input:focus,
@@ -153,8 +151,6 @@
     font-size: 0.9em;
   }
 }
-
-/* Adjust position of animated circle on medium screens */
 @media (max-width: 600px) {
   .loginBox {
     width: 95%;
@@ -179,8 +175,6 @@
   .inputBox label {
     font-size: 0.8em;
   }
-
-  /* Reposition the animated circle to top left */
   .animatedCircle {
     top: 10px;
     left: 10px;
@@ -191,7 +185,7 @@
 
 @media (max-width: 480px) {
   .animatedCircle {
-    display: none; /* Hide the animated circle on very small screens */
+    display: none; 
   }
 
   .container span {

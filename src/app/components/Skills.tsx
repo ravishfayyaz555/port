@@ -1,38 +1,40 @@
 import React from 'react';
 import styles from '../styles/Skills.module.css';
 
-const skills = [
-  { name: 'HTML', level: '90%' },
-  { name: 'CSS', level: '85%' },
-  { name: 'JavaScript', level: '80%' },
-  { name: 'TypeScript', level: '75%' },
-  { name: 'Next.js', level: '70%' },
-  { name: 'Tailwind CSS', level: '80%' },
+interface Skill {
+    name: string;
+    description: string; 
+}
 
+const skillsData: Skill[] = [
+    { name: 'HTML', description: 'Experienced in structuring web pages' },
+    { name: 'CSS', description: 'Proficient in styling and layouts' },
+    { name: 'JavaScript', description: 'Skilled in building dynamic web applications' },
+    { name: 'TypeScript', description: 'Strong understanding of typed JavaScript' },
+    { name: 'TailwindCSS', description: 'Building interactive UIs' },
+    { name: 'Next.js', description: 'Developing server-side rendered applications' },
 ];
 
 const Skills: React.FC = () => {
-  return (
-    <section id="skills" className={styles.skillsSection}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>My Skills</h2>
-        <div className={styles.skillsList}>
-          {skills.map((skill) => (
-            <div key={skill.name} className={styles.skill}>
-              <h3 className={styles.skillName}>{skill.name}</h3>
-              <div className={styles.progressBar}>
-                <div
-                  className={styles.progress}
-                  style={{ width: skill.level }}
-                ></div>
-              </div>
-              <p className={styles.skillLevel}>{skill.level}</p>
+    return (
+        <section id="skills" className={styles.skillsSection}>
+            <h2>My Skills</h2>
+            <div className={styles.skillsContainer}>
+                {skillsData.map((skill) => (
+                    <div key={skill.name} className={styles.card}>
+                        <div className={styles.cardInner}>
+                            <div className={styles.cardFront}>
+                                <h3>{skill.name}</h3>
+                            </div>
+                            <div className={styles.cardBack}>
+                                <p>{skill.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Skills;
