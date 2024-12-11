@@ -1,214 +1,103 @@
-.container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; 
-  background-color: #000;
-}
-
-.animatedCircle {
-  position: absolute;
-  width: 256px;
-  height: 256px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container span {
-  position: absolute;
-  left: 0;
-  width: 20px; 
-  height: 4px;
-  background: #2d2c662f;
-  border-radius: 8px;
-  transform-origin: 120px;
-  transform: scale(2) rotate(calc(var(--i) * (360deg / 50)));
-  animation: animateBlink 3s linear infinite;
-  animation-delay: calc(var(--i) * (3s / 50));
-}
-
-@keyframes animateBlink {
-  0%, 25% { background: #f0e98ce8; }
-}
-.loginBox {
-  position: relative;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  z-index: 1;
-}
-
-.loginBox form {
-  width: 100%;
-}
-
-.loginBox h2 {
-  font-size: 2em;
-  color: #fff;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.inputBox {
-  position: relative;
-  margin: 25px 0;
-}
-
-.inputBox input,
-.inputBox textarea {
-  width: 90%;
-  height: 50px; 
-  background: transparent;
-  border: 2px solid #2c4766;
-  outline: none;
-  border-radius: 40px;
-  font-size: 1em;
-  color: #fff;
-  padding: 15px 20px;
-  transition: 0.5s ease;
-  margin-left: 10px;
-}
-
-.inputBox textarea {
-  height: 60px; 
-  resize: none; 
-}
-
-.inputBox input:focus,
-.inputBox input:valid,
-.inputBox textarea:focus,
-.inputBox textarea:valid {
-  border-color: rgba(97, 122, 124, 0.13);
-}
-
-.inputBox label {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 1em;
-  color: white;
-  pointer-events: none;
-  transition: 0.5s ease;
-}
-
-.inputBox input:focus ~ label,
-.inputBox input:valid ~ label,
-.inputBox textarea:focus ~ label,
-.inputBox textarea:valid ~ label {
-  top: -10px;
-  font-size: 0.8em;
-  padding: 0 6px;
-  color: #0ef;
-}
-
-.btn {
-  width: 60%;
-  height: 45px;
-  background: rgb(61, 82, 83);
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #1f293a;
-  font-weight: 600;
-  margin: 20px auto;
-  display: block;
-}
-
-.btn:hover {
-  background-color: #2c4766;
-  color: #fff;
-}
-
-/* Media Queries */
-@media (max-width: 900px) {
-  .loginBox {
-    width: 90%;
-  }
-
-  .loginBox h2 {
-    font-size: 1.6em;
-  }
-
-  .inputBox input,
-  .inputBox textarea {
-    height: 45px;
-    font-size: 0.9em;
-  }
-
-  .btn {
-    width: 75%;
-  }
-
-  .inputBox label {
-    font-size: 0.9em;
-  }
-}
-@media (max-width: 600px) {
-  .loginBox {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .loginBox h2 {
-    font-size: 1.5em;
-  }
-
-  .inputBox input,
-  .inputBox textarea {
-    height: 40px;
-    font-size: 0.8em;
-  }
-
-  .btn {
-    width: 80%;
-    height: 40px;
-  }
-
-  .inputBox label {
-    font-size: 0.8em;
-  }
-  .animatedCircle {
-    top: 10px;
-    left: 10px;
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .animatedCircle {
-    display: none; 
-  }
-
-  .container span {
-    width: 15px; 
-    height: 3px;
-  }
-
-  .loginBox h2 {
-    font-size: 1.4em;
-  }
-
-  .inputBox input,
-  .inputBox textarea {
-    height: 35px;
-    font-size: 0.75em;
-  }
-
-  .btn {
-    width: 85%;
-    height: 35px;
-  }
-
-  .inputBox label {
-    font-size: 0.75em;
-  }
-}
+.contactSection {
+    padding: 40px 20px;
+    background-color: #121212; 
+    color: hashtag#ffffff; 
+   }
+   
+   .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: hashtag#1e1e1e;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   }
+   
+   .heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: hashtag#f5ba13; 
+   }
+   
+   .description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: hashtag#b3b3b3; 
+   }
+   
+   .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+   
+   .formGroup {
+    display: flex;
+    flex-direction: column;
+   }
+   
+   :global(label) {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: hashtag#f5ba13; 
+   }
+   
+   :global(input),
+   :global(textarea) {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #333333; 
+    border-radius: 8px;
+    background-color: hashtag#2c2c2c; 
+    color: hashtag#ffffff; 
+    outline: none;
+    transition: border-color 0.3s;
+   }
+   
+   :global(input:focus),
+   :global(textarea:focus) {
+    border-color: hashtag#f5ba13; 
+   }
+   
+   :global(textarea) {
+    resize: none;
+   }
+   
+   .button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #121212; 
+    background-color: hashtag#f5ba13;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+   }
+   
+   .button:hover {
+    background-color: hashtag#d4a10e; 
+    transform: translateY(-2px); 
+   }
+   
+   .button:active {
+    transform: translateY(0); 
+   }
+   
+   @media (max-width: 768px) {
+    .container {
+    padding: 20px;
+    }
+   
+    .heading {
+    font-size: 1.5rem;
+    }
+   
+    .description {
+    font-size: 1rem;
+    }
+   }

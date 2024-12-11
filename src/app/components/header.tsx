@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <div className={styles.logo}>Areeba...</div>
+        <div className={styles.logo}>Ravish fayyaz...</div>
         
         {/* Toggle button */}
         <button className={styles.hamburger} onClick={toggleMenu}>

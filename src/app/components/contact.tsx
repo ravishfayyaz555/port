@@ -1,37 +1,50 @@
-import styles from '../styles/Contact.module.css';
+"use client";
+import styles from '../styles/contact.module.css';
 
-const ContactForm = () => {
-  return (
-    <section id="contact">
-      <div className={styles.container}>
-        <div className={styles.animatedCircle}>
-          {[...Array(50)].map((_, i) => (
-            <span
-              key={i}
-              className={styles.blinkSpan} 
-              style={{ '--i': i } as React.CSSProperties}
-            ></span>
-          ))}
-        </div>
 
-        <div className={styles.loginBox}>
-          <h2 className={styles.heading}>Contact Now!</h2>
-          <form>
-            <div className={styles.inputBox}>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className={styles.inputBox}>
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <div className={styles.inputBox}>
-              <textarea placeholder="Your Message" required rows={4}></textarea>
-            </div>
-            <button type="submit" className={styles.btn}>Contact Me</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
+const ContactSection: React.FC = () => {
+ return (
+ <div className={styles.contactSection}>
+ <div className={styles.container}>
+ <h2 className={styles.heading}>Contact Us</h2>
+ <p className={styles.description}>
+ Have questions or feedback? We'd love to hear from you. Fill out the form below!
+ </p>
+ <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+ <div className={styles.formGroup}>
+ <label htmlFor="name">Name</label>
+ <input
+ type="text"
+ id="name"
+ className={styles.input}
+ placeholder="Your Name"
+ />
+ </div>
+ <div className={styles.formGroup}>
+ <label htmlFor="email">Email</label>
+ <input
+ type="email"
+ id="email"
+ className={styles.input}
+ placeholder="Your Email"
+ />
+ </div>
+ <div className={styles.formGroup}>
+ <label htmlFor="message">Message</label>
+ <textarea
+ id="message"
+ rows={4}
+ className={styles.textarea}
+ placeholder="Your Message"
+ ></textarea>
+ </div>
+ <button type="submit" className={styles.button}>
+ Send Message
+ </button>
+ </form>
+ </div>
+ </div>
+ );
 };
 
-export default ContactForm;
+export default ContactSection;
