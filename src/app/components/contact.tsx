@@ -1,5 +1,5 @@
 "use client";
-import styles from '../styles/contact.module.css';
+import styles from '../styles/Contact.module.css';
 
 
 const ContactSection: React.FC = () => {
