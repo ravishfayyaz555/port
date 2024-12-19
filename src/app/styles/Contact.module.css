@@ -2,51 +2,52 @@
     padding: 40px 20px;
     background-color: #121212; 
     color: #ffffff; 
-   }
-   
-   .container {
+}
+
+.container {
     max-width: 600px;
     margin: 0 auto;
     background-color: #1e1e1e;
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-   }
-   
-   .heading {
+}
+
+.heading {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
     text-align: center;
     color: #f5ba13; 
-   }
-   
-   .description {
+}
+
+.description {
     font-size: 1.1rem;
     margin-bottom: 20px;
     text-align: center;
     color: #b3b3b3; 
-   }
-   
-   .form {
+}
+
+.form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-   }
-   
-   .formGroup {
+}
+
+.formGroup {
     display: flex;
     flex-direction: column;
-   }
-   
-   :global(label) {
+}
+
+/* Fixing the global selector issue */
+.contactSection :global(label) {
     font-size: 1rem;
     margin-bottom: 5px;
     color: #f5ba13; 
-   }
-   
-   :global(input),
-   :global(textarea) {
+}
+
+.contactSection :global(input),
+.contactSection :global(textarea) {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #333333; 
@@ -55,18 +56,18 @@
     color: #ffffff; 
     outline: none;
     transition: border-color 0.3s;
-   }
-   
-   :global(input:focus),
-   :global(textarea:focus) {
+}
+
+.contactSection :global(input:focus),
+.contactSection :global(textarea:focus) {
     border-color: #f5ba13; 
-   }
-   
-   :global(textarea) {
+}
+
+.contactSection :global(textarea) {
     resize: none;
-   }
-   
-   .button {
+}
+
+.button {
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -77,27 +78,27 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.2s;
-   }
-   
-   .button:hover {
+}
+
+.button:hover {
     background-color: #d4a10e; 
     transform: translateY(-2px); 
-   }
-   
-   .button:active {
+}
+
+.button:active {
     transform: translateY(0); 
-   }
-   
-   @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .container {
-    padding: 20px;
+        padding: 20px;
     }
-   
+
     .heading {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-   
+
     .description {
-    font-size: 1rem;
+        font-size: 1rem;
     }
-   }
+}
