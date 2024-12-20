@@ -27,7 +27,7 @@ const HomeSection: React.FC = () => {
     return (
         <section id="home" className={styles.homeContainer}>
             <div className={styles.content}>
-                <h1 className={styles.name}>Hi 👋 I am Areeba</h1>  
+                <h1 className={styles.name}>Hi 👋 I am Ravish</h1>  
                 <h2 className={styles.title}>{displayedText}</h2> 
                 <Link href="#contact">
                     <button className={styles.button}>Hire Me</button>
